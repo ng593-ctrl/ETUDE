@@ -1,0 +1,72 @@
+/* src/pages/NoteEditor.css - FINAL CLEAN FOCUS MODE STYLES */
+
+/* 1. EDITOR WRAPPER: Remove all external borders and shadows */
+.editor-wrapper {
+    border: none !important; 
+    box-shadow: none !important;
+    background-color: transparent !important; 
+}
+
+/* 2. TOOLBAR FIX: Hide the toolbar area completely */
+.editor-toolbar {
+    display: none !important;
+    height: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+}
+
+/* 3. STATUS BAR FIX: Hide the status bar area completely */
+.editor-statusbar {
+    display: none !important;
+    height: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+}
+
+/* 4. TEXT AREA BACKGROUND: Dark background, white cursor, subtle selection */
+.CodeMirror, 
+.CodeMirror-scroll, 
+.CodeMirror-sizer {
+    background-color: #101035 !important; /* The core dark color */
+    color: #000000 !important;           /* Light text color */
+    border: none !important; 
+    box-shadow: none !important;
+}
+
+/* FIX 4.1: CURSOR COLOR (The blinking line) */
+.CodeMirror-cursor {
+    border-left: 1px solid #ffffff !important; /* Set cursor to white */
+}
+
+/* FIX 4.2: SELECTION/HIGHLIGHT COLOR (The background when text is selected) */
+.CodeMirror-selected {
+    background-color: #1f1a33 !important; /* Darker shade of the background color */
+}
+
+
+/* 🛑 FIX 5: SYNTAX SUBTLETY - Make Markdown characters less distracting */
+
+/* Target the Markdown character delimiters and soften their appearance */
+.cm-s-default .cm-header, /* Target Markdown headers (#) */
+.cm-s-default .cm-strong, /* Target Bold (** or __) */
+.cm-s-default .cm-em,     /* Target Italics (* or _) */
+.cm-s-default .cm-strikethrough { /* Target Strikethrough (~~) */
+    /* Make the characters slightly transparent and blend with the dark theme */
+    color: #4f4f65 !important; 
+    opacity: 0.8;
+    font-weight: normal !important;
+}
+
+/* Ensure the actual text being formatted remains bright and readable */
+.cm-s-default .cm-header ~ span,
+.cm-s-default .cm-strong ~ span {
+    color: #e2e8f0 !important;
+    opacity: 1;
+}
+
+/* Ensure syntax is clearly visible when the cursor is on the line */
+.CodeMirror-activeline .cm-header,
+.CodeMirror-activeline .cm-strong {
+    opacity: 1;
+    color: #94a3b8 !important; /* Slightly brighter color for active line */
+}

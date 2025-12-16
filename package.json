@@ -1,0 +1,27 @@
+{
+  "name": "study-sync",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "easymde": "^2.20.0",
+    "firebase": "^10.x.x",
+    "react": "^18.x.x",
+    "react-dom": "^18.x.x",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^6.x.x",
+    "react-simplemde-editor": "^5.2.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.22",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.18",
+    "vite": "^5.x.x"
+  }
+}

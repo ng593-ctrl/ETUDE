@@ -1,0 +1,33 @@
+/* src/index.css - CLEAN AND FINAL GLOBAL STYLES */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CRITICAL FIX FOR FULL-HEIGHT LAYOUTS */
+html, body, #root {
+    height: 100%;
+}
+
+/* --- FINAL GLOBAL OVERRIDES FOR SimpleMDE/EasyMDE --- */
+
+/* Fix the white background in the main text area */
+.CodeMirror {
+    background-color: #101035 !important; 
+}
+
+/* Fix the white hover block on toolbar buttons */
+.editor-toolbar a:hover, 
+.editor-toolbar a:focus {
+    background-color: transparent !important;
+}
+
+/* Fix the text color for the editing area */
+.CodeMirror-lines {
+    color: #ffffff !important;
+}
+
+/* Optional: Fix status bar color */
+.editor-statusbar {
+    color: #9ca3af !important;
+}
